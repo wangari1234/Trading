@@ -9,15 +9,17 @@ import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { StockGraphsComponent } from './stock-graphs/stock-graphs.component';
+import { CurrencyComponent } from './components/currency/currency.component';
+import { StockGraphsComponent } from './components/stock-graphs/stock-graphs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StockGraphsComponent
+    StockGraphsComponent,
+    CurrencyComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

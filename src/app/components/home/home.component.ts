@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
+import { ServiceService } from '../../services/service.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent {
   isMobile= true;
   isCollapsed = true;
 
-  constructor(private observer: BreakpointObserver) {}
+  constructor(private observer: BreakpointObserver, private service:ServiceService) {}
 
   ngOnInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((screenSize) => {
@@ -24,6 +25,7 @@ export class HomeComponent {
         this.isMobile = false;
       }
     });
+    this.getData()
   }
 
   toggleMenu() {
@@ -36,4 +38,16 @@ export class HomeComponent {
     }
   }
   login(){}
+  getData(){
+    this.service.getdata().subscribe(
+      ((res) => {
+        console.log(res);
+        
+      }),
+      ((err) => {
+        console.log(err);
+        
+      })
+    )
+  }
 }
