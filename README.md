@@ -1,4 +1,5 @@
 # Trading
+<<<<<<< HEAD
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+This is a website I am building to apply what I am currently learning in web development-Angular framework. It involves creating a stock-market websites that consumes the open-source APIs availble online.
+>>>>>>> 83569319dd4b0e675a5a77cf909a073344b0ea7c
